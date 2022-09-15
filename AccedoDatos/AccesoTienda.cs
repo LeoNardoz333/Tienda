@@ -18,7 +18,8 @@ namespace AccedoDatos
 
         public void Guardar(dynamic Entidad)
         {
-            
+            b.comando(string.Format("call insertarproductos({0},'{1}','{2}',{3})",
+                Entidad.idProducto,Entidad.Nombre,Entidad.Descripcion,Entidad.Precio));
         }
 
         public DataSet Mostrar(string filtro)
