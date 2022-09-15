@@ -29,8 +29,8 @@ namespace Manejador
             tabla.Columns.Clear();
             tabla.RowTemplate.Height = 30;
             tabla.DataSource = t.Mostrar(filtro).Tables["pais"];
-            tabla.Columns.Insert(3, g.Boton("Editar", Color.Green));
-            tabla.Columns.Insert(4, g.Boton("Borrar", Color.Red));
+            tabla.Columns.Insert(4, g.Boton("Editar", Color.Green));
+            tabla.Columns.Insert(5, g.Boton("Borrar", Color.Red));
             tabla.Columns[0].Visible = false;
         }
     }
