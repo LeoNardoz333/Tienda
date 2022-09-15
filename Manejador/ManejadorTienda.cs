@@ -21,7 +21,8 @@ namespace Manejador
 
         public void Guardar(dynamic Entidad)
         {
-            
+            t.Guardar(Entidad);
+            g.Mensaje("Se guardó correctamente","¡ATENCIÓN!",MessageBoxIcon.Information);
         }
 
         public void Mostrar(DataGridView tabla, string filtro)
