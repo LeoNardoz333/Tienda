@@ -10,7 +10,7 @@ namespace AccedoDatos
 {
     public class AccesoTienda : IEntidades
     {
-        Base b = new Base("localhost","root","","producto");
+        Base b = new Base("localhost","root","","tienda");
         public void Borrar(dynamic Entidad)
         {
             
