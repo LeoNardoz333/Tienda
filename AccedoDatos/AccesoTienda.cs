@@ -13,7 +13,7 @@ namespace AccedoDatos
         Base b = new Base("localhost","root","","tienda");
         public void Borrar(dynamic Entidad)
         {
-            
+            b.comando(string.Format("call deleteproductos({0})",Entidad.idProducto));
         }
 
         public void Guardar(dynamic Entidad)

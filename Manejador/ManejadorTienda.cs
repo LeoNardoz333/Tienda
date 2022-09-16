@@ -16,7 +16,10 @@ namespace Manejador
         Graficos g = new Graficos();
         public void Borrar(dynamic Entidad)
         {
-            
+            DialogResult rs = MessageBox.Show(string.Format("¿Estás seguro de borrar: {0}",
+                Entidad.Nombre), "¡ATENCIÓN!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+                t.Borrar(Entidad);
         }
 
         public void Guardar(dynamic Entidad)
