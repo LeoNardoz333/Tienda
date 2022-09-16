@@ -51,6 +51,13 @@ namespace PresentacionTienda
             tienda.Precio = int.Parse(dtgProductos.Rows[fila].Cells[3].Value.ToString());
             switch (columna)
             {
+                case 4:
+                    {
+                        FrmProductos p = new FrmProductos();
+                        p.ShowDialog();
+                        txtBuscar.Text = "";
+                        Actualizar();
+                    } break;
                 case 5:
                     {
                         mt.Borrar(tienda);

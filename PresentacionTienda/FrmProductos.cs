@@ -19,6 +19,12 @@ namespace PresentacionTienda
         {
             InitializeComponent();
             mt = new ManejadorTienda();
+            if(FrmPrincipal.tienda.idProducto>0)
+            {
+                txtNombre.Text = FrmPrincipal.tienda.Nombre;
+                txtDescripcion.Text = FrmPrincipal.tienda.Descripcion;
+                txtPrecio.Text = FrmPrincipal.tienda.Precio.ToString();
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
