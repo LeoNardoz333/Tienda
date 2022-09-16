@@ -60,6 +60,7 @@ namespace PresentacionTienda
             this.dtgProductos.Size = new System.Drawing.Size(569, 276);
             this.dtgProductos.TabIndex = 9;
             this.dtgProductos.TabStop = false;
+            this.dtgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellClick);
             this.dtgProductos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellEnter);
             // 
             // btnAgregar

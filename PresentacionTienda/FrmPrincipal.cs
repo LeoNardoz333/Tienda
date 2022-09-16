@@ -43,6 +43,24 @@ namespace PresentacionTienda
             fila = e.RowIndex;
         }
 
+        private void dtgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tienda.idProducto = int.Parse(dtgProductos.Rows[fila].Cells[0].Value.ToString());
+            tienda.Nombre = dtgProductos.Rows[fila].Cells[1].Value.ToString();
+            tienda.Descripcion = tienda.Nombre = dtgProductos.Rows[fila].Cells[2].Value.ToString();
+            tienda.Precio = int.Parse(dtgProductos.Rows[fila].Cells[3].Value.ToString());
+            switch (columna)
+            {
+                case 5:
+                    {
+                        mt.Borrar(tienda);
+                        txtBuscar.Text = "";
+                        Actualizar();
+                    }
+                    break;
+            }
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             tienda.idProducto = -1;
